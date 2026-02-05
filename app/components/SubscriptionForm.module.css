@@ -1,0 +1,652 @@
+.page {
+  min-height: 100vh;
+  padding: 16px;
+  background: linear-gradient(
+    135deg,
+    var(--background),
+    rgba(236, 241, 248, 0.3) 40%,
+    var(--background)
+  );
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.card {
+  border: 1px solid rgba(216, 225, 237, 0.5);
+  box-shadow: var(--shadow-medium, 0 10px 30px rgba(0, 0, 0, 0.06));
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-medium);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* Header */
+.headerCenter {
+  text-align: center;
+  padding-bottom: 1.25rem;
+}
+
+.gradientTitle {
+  font-size: clamp(1.875rem, 2.5vw, 2.25rem);
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.cardDescription {
+  margin-top: 8px;
+  color: var(--muted-foreground);
+  font-size: 0.975rem;
+}
+
+/* Banner */
+.banner {
+  margin-top: 16px;
+  padding: 16px;
+  background: rgba(2, 6, 23, 0.04);
+  border: 1px solid var(--border);
+  color: var(--muted-foreground);
+  border-radius: 12px;
+}
+
+.bannerStrong {
+  color: var(--foreground);
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.bannerTiny {
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Content sections */
+.content {
+  padding: 16px;
+}
+
+.sectionH3 {
+  color: var(--foreground);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 6px 0 12px;
+}
+
+.helpText {
+  color: var(--muted-foreground);
+}
+
+.sep {
+  margin: 12px 0;
+  opacity: 0.6;
+}
+
+.sepTight {
+  margin: 8px 0;
+  opacity: 0.6;
+}
+
+/* Summary + payments */
+.boxMuted {
+  background: rgba(2, 6, 23, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.boxTitle {
+  font-weight: 600;
+  color: var(--foreground);
+  margin: 0 0 6px;
+}
+
+.summaryGrid {
+  display: grid;
+  gap: 8px;
+}
+
+.rowBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.mutedText {
+  color: var(--muted-foreground);
+  font-size: 0.95rem;
+}
+
+.valueText {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.totalRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.totalLabel {
+  color: var(--foreground);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.totalValue {
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+/* Accent box incl. payments & warnings */
+.boxAccent {
+  background: rgba(255, 13, 4, 0.04);
+  border: 1px solid rgba(255, 13, 4, 0.2);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.sectionTitle {
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0 0 10px;
+}
+
+.paymentWrap {
+  display: grid;
+  gap: 12px;
+}
+
+.paymentGrid {
+  display: grid;
+  gap: 10px;
+}
+
+.paymentCard {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(35, 85, 155, 0.2);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.paymentHint {
+  font-size: 12px;
+  color: var(--muted-foreground);
+  margin-bottom: 6px;
+}
+
+.bgNumber,
+.bgNumberSm {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  color: var(--foreground);
+  font-weight: 800;
+}
+
+.bgNumber {
+  font-size: 1.5rem;
+}
+.bgNumberSm {
+  font-size: 1.25rem;
+}
+
+.paymentFacts {
+  display: grid;
+  gap: 4px;
+}
+
+.mutedTextSmall {
+  color: var(--muted-foreground);
+  font-size: 12px;
+}
+
+.mutedTextTiny {
+  color: var(--muted-foreground);
+  font-size: 11px;
+}
+
+.strong {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.amountPanel {
+  margin-top: 10px;
+  background: rgba(35, 85, 155, 0.06);
+  border: 1px solid rgba(35, 85, 155, 0.2);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.amountBig {
+  color: var(--foreground);
+  font-weight: 800;
+  font-size: 1.6rem;
+}
+
+/* Warning block with QR to the right */
+.warningBox {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.warningGrid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: start;
+}
+
+.warningTitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0 0 6px;
+}
+
+.warningList {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted-foreground);
+  font-size: 12px;
+}
+
+.qrCardAlt {
+  text-align: center;
+  border: 1px solid rgba(35, 85, 155, 0.2);
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.qrHint {
+  color: var(--muted-foreground);
+  font-size: 11px;
+  margin-bottom: 6px;
+}
+
+.qrBoxSmall {
+  background: #fff;
+  display: inline-block;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.qrImageSm {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  display: block;
+}
+
+.qrFooter {
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--muted-foreground);
+}
+
+/* Form calculated total section */
+.amountWrap {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.amountCard {
+  background: rgba(35, 85, 155, 0.08);
+  border: 1px solid rgba(35, 85, 155, 0.2);
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.amountMed {
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 1.6rem;
+  margin-top: 4px;
+}
+
+.paymentInfo {
+}
+.infoTitle {
+  color: var(--foreground);
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.warningMini {
+  margin-top: 10px;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.warningMiniTitle {
+  color: var(--foreground);
+  font-weight: 700;
+  font-size: 12px;
+  margin: 0 0 2px;
+}
+
+/* 2/3-col grids */
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+.grid3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+.span2 {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 720px) {
+  .grid2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Info box */
+.infoBox {
+  background: rgba(2, 6, 23, 0.04);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.infoTitle {
+  color: var(--foreground);
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.infoText {
+  color: var(--muted-foreground);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.infoDivider {
+  margin-top: 10px;
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+}
+
+.infoSubtitle {
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 6px;
+}
+
+.ulTiny {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted-foreground);
+  font-size: 13px;
+}
+
+.payPanel {
+  margin-top: 10px;
+  background: rgba(35, 85, 155, 0.06);
+  border: 1px solid rgba(35, 85, 155, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Checkbox rows */
+.checkboxRow {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.sectionLabel {
+  font-weight: 700;
+  color: var(--foreground);
+  cursor: pointer;
+}
+
+.link {
+  color: var(--primary);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* Signature area */
+.boxMutedBorderTop {
+  background: rgba(2, 6, 23, 0.04);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--primary);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.signatureGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+@media (min-width: 720px) {
+  .signatureGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.sigNote {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.sigNoteText {
+  font-size: 12px;
+  color: var(--muted-foreground);
+  font-style: italic;
+  flex: 1;
+}
+
+.textForeground {
+  color: var(--foreground);
+}
+
+/* Success badge */
+.successBadge {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+}
+
+.successIcon {
+  width: 40px;
+  height: 40px;
+  color: #fff;
+}
+
+/* PDF button (outside receipt) */
+.pdfButtonWrap {
+  text-align: center;
+  margin-top: 18px;
+}
+
+/* PDF button (outside receipt) */
+.printBtn {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  background: var(--primary); /* solid blå */
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+.printBtn:hover {
+  background: #1f4b88;
+}
+
+/* Submit-knappen */
+.submitBtn {
+  width: 100%;
+  background: var(--primary); /* solid blå */
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: none;
+}
+.submitBtn:hover {
+  background: #1f4b88;
+}
+
+.downloadIcon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Footer under form */
+.foot {
+  margin-top: 18px;
+  text-align: center;
+  color: var(--muted-foreground);
+  font-size: 13px;
+}
+
+.company {
+  color: var(--foreground);
+  font-weight: 700;
+}
+
+.tiny {
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.contact {
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+.tinyNote {
+  margin-top: 8px;
+  font-style: italic;
+  font-size: 12px;
+  color: var(--muted-foreground);
+}
+
+/* Receipt bottom block (inside confirmation) */
+.receiptFoot {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.receiptFootText {
+  color: var(--muted-foreground);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Two-col helpers */
+.twoColGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.fullRow {
+  grid-column: 1 / -1;
+}
+@media (min-width: 720px) {
+  .twoColGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Amount labels/cards inside form */
+.infoTitle,
+.sectionTitle {
+  letter-spacing: 0.2px;
+}
+.settlementSignature {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+}
+
+.settlementRowHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 6px;
+  color: var(--muted-foreground);
+  font-weight: 500;
+}
+
+.settlementRow {
+  display: flex;
+  gap: 24px;
+}
+
+.settlementRow > div {
+  flex: 1;
+}
+
+.settlementValue {
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.signatureLine {
+  border-bottom: 1px solid var(--border);
+  height: 18px; /* “plats för underskrift” */
+  margin-bottom: 4px;
+}
+
+.signatureLabel {
+  font-size: 11px;
+  color: var(--muted-foreground);
+}
+
+.signatureName {
+  margin-top: 2px;
+  font-size: 11px;
+  font-weight: 600;
+}
+@media print {
+  .qrOnlyWeb {
+    display: none;
+  }
+}

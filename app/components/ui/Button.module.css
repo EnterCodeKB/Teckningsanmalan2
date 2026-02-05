@@ -1,0 +1,124 @@
+:root {
+  --bg: hsl(210 25% 98%);
+  --text: hsl(215 25% 15%);
+  --primary: hsl(210 85% 40%);
+  --primary-fore: hsl(0 0% 100%);
+  --destructive: hsl(0 84% 60%);
+  --destructive-fore: hsl(0 0% 100%);
+  --secondary: hsl(210 40% 96%);
+  --secondary-fore: hsl(215 25% 15%);
+  --accent: hsl(195 75% 45%);
+  --accent-fore: hsl(0 0% 100%);
+  --border: hsl(210 25% 88%);
+  --ring: hsl(210 85% 40%);
+  --radius: 8px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  border-radius: var(--radius);
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: background-color 0.15s ease, color 0.15s ease,
+    border-color 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
+  outline: none;
+  border: 1px solid transparent;
+}
+
+.btn:focus-visible {
+  box-shadow: 0 0 0 2px hsl(0 0% 100% / 1), 0 0 0 4px var(--ring);
+}
+
+/* Sizes */
+.size_default {
+  height: 40px;
+  padding: 0 1rem;
+}
+.size_sm {
+  height: 36px;
+  padding: 0 0.75rem;
+  border-radius: 6px;
+}
+.size_lg {
+  height: 44px;
+  padding: 0 2rem;
+  border-radius: 10px;
+}
+.size_icon {
+  height: 40px;
+  width: 40px;
+  padding: 0;
+}
+
+/* Variants */
+.variant_default {
+  background: var(--primary);
+  color: var(--primary-fore);
+}
+.variant_default:hover {
+  filter: brightness(0.95);
+}
+
+.variant_destructive {
+  background: var(--destructive);
+  color: var(--destructive-fore);
+}
+.variant_destructive:hover {
+  filter: brightness(0.95);
+}
+
+.variant_outline {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+.variant_outline:hover {
+  background: hsl(210 40% 96% / 0.9);
+}
+
+.variant_secondary {
+  background: var(--secondary);
+  color: var(--secondary-fore);
+}
+.variant_secondary:hover {
+  filter: brightness(0.98);
+}
+
+.variant_ghost {
+  background: transparent;
+  color: var(--text);
+}
+.variant_ghost:hover {
+  background: hsl(210 40% 96% / 0.9);
+}
+
+.variant_link {
+  background: transparent;
+  color: var(--primary);
+  text-decoration: none;
+}
+.variant_link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Disabled */
+.btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Ikoner inuti knappen (svg) – samma storlek som shadcn */
+.btn :global(svg) {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  pointer-events: none;
+}

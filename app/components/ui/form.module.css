@@ -1,0 +1,31 @@
+:root {
+  --text: hsl(215 25% 15%);
+  --muted-text: hsl(215 15% 45%);
+  --destructive: hsl(0 84% 60%);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.label {
+  color: var(--text);
+  font-weight: 600;
+}
+.labelError {
+  color: var(--destructive);
+}
+.control {
+  display: contents;
+} /* låter barn-komponenten (Input) sköta layouten */
+.description {
+  font-size: 12px;
+  color: var(--muted-text);
+}
+.message {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--destructive);
+}

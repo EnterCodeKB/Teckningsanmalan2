@@ -1,0 +1,48 @@
+:root {
+  --panel: hsl(0 0% 100%);
+  --border: hsl(210 25% 88%);
+  --text: hsl(215 25% 15%);
+  --muted-text: hsl(215 15% 45%);
+  --radius: 12px;
+  --shadow: 0 10px 30px -8px hsl(210 85% 40% / 0.18);
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  overflow: hidden;
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 24px;
+}
+
+.cardTitle {
+  font-size: clamp(20px, 2.2vw, 28px);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.cardDescription {
+  color: var(--muted-text);
+  font-size: 14px;
+}
+
+.cardContent {
+  padding: 24px;
+  padding-top: 0;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+  padding-top: 0;
+}
